@@ -27,6 +27,13 @@ def main():
         if keys[pygame.K_DOWN]:
             player2y += 1
 
+        keys=pygame.key.get_pressed()
+        if keys[pygame.K_w]:
+            player1y -= 1
+
+        if keys[pygame.K_s]:
+            player1y += 1
+
         screen.fill((255, 255, 255))
     
         pygame.draw.circle(screen, (0, 0, 0), (player1x, player1y), 5)
