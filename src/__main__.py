@@ -6,10 +6,14 @@ def main():
     pygame.init()
     
     screen = pygame.display.set_mode([500, 500])
+    clock = pygame.time.Clock()
     
     running = True
-    playerx = 250
-    playery = 250
+    player1x = 50
+    player1y = 250
+    
+    player2x = 450
+    player2y = 250
     
     while running:
         for event in pygame.event.get():
@@ -18,16 +22,25 @@ def main():
 
         keys=pygame.key.get_pressed()
         if keys[pygame.K_UP]:
-            playery -= 1
+            player2y -= 1
 
         if keys[pygame.K_DOWN]:
-            playery += 1
+            player2y += 1
+
+        keys=pygame.key.get_pressed()
+        if keys[pygame.K_w]:
+            player1y -= 1
+
+        if keys[pygame.K_s]:
+            player1y += 1
 
         screen.fill((255, 255, 255))
     
-        pygame.draw.circle(screen, (0, 0, 0), (playerx, playery), 5)
+        pygame.draw.circle(screen, (0, 0, 0), (player1x, player1y), 5)
+        pygame.draw.circle(screen, (0, 0, 0), (player2x, player2y), 5)
     
         pygame.display.flip()
+        clock.tick(60)
 
     pygame.quit()
 
