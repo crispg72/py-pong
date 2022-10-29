@@ -16,6 +16,13 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
 
+        keys=pygame.key.get_pressed()
+        if keys[pygame.K_UP]:
+            playery -= 1
+
+        if keys[pygame.K_DOWN]:
+            playery += 1
+
         screen.fill((255, 255, 255))
     
         pygame.draw.circle(screen, (0, 0, 0), (playerx, playery), 5)
