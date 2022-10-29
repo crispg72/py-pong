@@ -8,6 +8,8 @@ def main():
     screen = pygame.display.set_mode([500, 500])
     
     running = True
+    playerx = 250
+    playery = 250
     
     while running:
         for event in pygame.event.get():
@@ -16,7 +18,7 @@ def main():
 
         screen.fill((255, 255, 255))
     
-        pygame.draw.circle(screen, (0, 0, 0), (250, 250), 5)
+        pygame.draw.circle(screen, (0, 0, 0), (playerx, playery), 5)
     
         pygame.display.flip()
 
