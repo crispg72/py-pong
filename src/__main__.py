@@ -15,6 +15,8 @@ def main():
     player2x = 450
     player2y = 250
     
+    centre = (250, 250)
+    
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -38,7 +40,8 @@ def main():
     
         pygame.draw.rect(screen, (0, 0, 0), (player1x, player1y, 10, 40))
         pygame.draw.rect(screen, (0, 0, 0), (player2x, player2y, 10, 40))
-    
+        pygame.draw.circle(screen, (0, 0, 0), centre, 5)
+        
         pygame.display.flip()
         clock.tick(60)
 
