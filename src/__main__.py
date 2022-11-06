@@ -15,7 +15,7 @@ def main():
     player2x = 450
     player2y = 250
     
-    centre = 255, 255
+    centre = (250, 250)
     
     while running:
         for event in pygame.event.get():
