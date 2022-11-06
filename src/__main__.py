@@ -36,8 +36,8 @@ def main():
 
         screen.fill((255, 255, 255))
     
-        pygame.draw.circle(screen, (0, 0, 0), (player1x, player1y), 5)
-        pygame.draw.circle(screen, (0, 0, 0), (player2x, player2y), 5)
+        pygame.draw.rect(screen, (0, 0, 0), (player1x, player1y, 10, 40))
+        pygame.draw.rect(screen, (0, 0, 0), (player2x, player2y, 10, 40))
     
         pygame.display.flip()
         clock.tick(60)
